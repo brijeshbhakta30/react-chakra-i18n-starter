@@ -1,4 +1,7 @@
 {
+  "env": {
+    "jest/globals": true
+  },
   "extends": [
     "airbnb",
     "airbnb-typescript",
@@ -17,7 +20,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "eslint-plugin-import-helpers"
+    "eslint-plugin-import-helpers",
+    "jest"
   ],
   "rules": {
     "@typescript-eslint/no-empty-interface": ["error", {
@@ -26,6 +30,7 @@
     ],
     "@typescript-eslint/no-explicit-any": "off",
     "comma-dangle": "off",
+    "import/no-import-module-exports": "off",
     "import-helpers/order-imports": ["error", {
       "alphabetize": {
         "ignoreCase": true,

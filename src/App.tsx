@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   Box,
@@ -15,6 +15,7 @@ import ColorModeSwitcher from "./ColorModeSwitcher";
 import Logo from "./Logo";
 
 export default function App() {
+  const { t } = useTranslation();
   return <ChakraProvider theme={theme}>
     <Box fontSize="xl" textAlign="center">
       <Grid minH="100vh" p={3}>
@@ -31,7 +32,7 @@ export default function App() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Learn Chakra
+            {t("home.demo.learn")}
           </Link>
         </VStack>
       </Grid>
