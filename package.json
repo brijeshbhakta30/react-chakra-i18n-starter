@@ -31,7 +31,8 @@
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile:locale": "node ./build-translations",
+    "locales:compile": "node ./build-translations",
+    "locales:watch": "nodemon --exec \"npm run locales:compile\" --watch src/locales --ignore src/locales/*/translation.json",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky install"
@@ -73,6 +74,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
   },
   "lint-staged": {
